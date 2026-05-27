@@ -29,10 +29,10 @@ claude
 
 Then tell Claude what your product is, and work through these 4 steps. Claude knows the workflow (see `CLAUDE.md`) — let it drive, you make the calls.
 
-1. **Define your ICP** — who exactly, and what *trigger* says they need you *now*.
-2. **Source 25–50 real leads** — Claude finds them live (web/scrape/free sources) for your actual market.
-3. **Write the copy** — personalized step-1 + step-2 emails, following the rules in `CLAUDE.md`.
-4. **Assemble the campaign** — output a leads CSV + the email sequence to `output/`.
+1. **Define your ICP** — who exactly, and what *trigger* says they need you *now*. (ICP = ideal customer profile. Claude will explain anything unfamiliar — beginners welcome.)
+2. **Pick your channel + source 25–50 real leads** — cold email or LinkedIn (B2C: community / creator / partner). Claude finds real leads live for your actual market.
+3. **Write the copy** — personalized step-1 + step-2 messages with a **pilot / design-partner CTA** (not a hard sell), following the rules in `CLAUDE.md`.
+4. **Assemble the campaign** — output a leads CSV + the sequence to `output/`.
 
 Just say to Claude:
 > "Read CLAUDE.md, then walk me through building a first campaign. Our product is ___ and it helps ___."

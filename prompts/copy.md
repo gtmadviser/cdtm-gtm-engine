@@ -7,7 +7,7 @@ Write a 2-step sequence. Personalize from each lead's `trigger_signal`. Follow e
 - **Scenario opener** — start with their situation/pain, not your product or a stat.
 - **No em-dashes (—).** Commas/periods only.
 - **No unsupported stats** ("21x", "save 64%"). Worst performers, every time.
-- **One soft CTA** (interest or a 10-min call), never a hard pitch.
+- **One soft CTA — default to a pilot / design-partner ask**, not a sale ("open to being one of our first design partners?"). Never a hard pitch.
 - **Match tone to segment** (formal vs. informal) and be consistent.
 - End the body with `{{signature}}` (no hardcoded greeting block).
 - First line personalized from the trigger — specific enough it couldn't be sent to anyone else.
@@ -45,3 +45,10 @@ Subject: Re: [step-1 subject]
 ```
 
 Then show the team how a personalized step-1 looks for **3 specific leads** from their list, using each lead's real trigger.
+
+## If the channel is LinkedIn (not email)
+Same pipeline, shorter copy, no subject lines:
+- **Connection note:** ≤ 300 characters, one personalized line tied to their trigger + a soft reason to connect. No pitch.
+- **DM 1 (after they accept):** 2–3 sentences. Scenario opener + the pilot/design-partner ask.
+- **DM 2 (+3 days):** one line, new angle, soft nudge.
+Write these to `output/campaign.md` under a `## LinkedIn` heading instead of the email steps. All other rules (short, no em-dashes, no fake stats, personalize from trigger) still apply.
