@@ -11,3 +11,6 @@ venv/
 # Env / secrets — never commit keys
 .env
 *.local
+
+# macOS
+.DS_Store
