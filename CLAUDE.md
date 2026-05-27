@@ -51,7 +51,7 @@ Make sure `output/` has `icp.md`, `leads.csv`, `campaign.md`. Then ask the team:
 ## Copy rules (learned from real campaigns — non-negotiable)
 
 - **Short.** 50–70 words, max 3 short paragraphs. Long emails lose.
-- **Scenario opener > product-first.** Open with the prospect's situation/pain, not your features or stats. (Real data: scenario-opener variants won all opportunities; product-first won zero.)
+- **Scenario opener > product-first.** Open with the prospect's situation/pain, not your features or stats. In practice scenario openers consistently win; product-first openers underperform badly.
 - **No em-dashes (—).** Reads AI-generated and hurts deliverability. Use commas or periods.
 - **No unsupported stats** ("21x faster", "save 64%"). They are consistently the worst performers. If you cite a number, it must be credible and specific.
 - **One soft CTA — default to landing a pilot / design partner, not a sale.** For an early-stage MPD product the realistic ask is a conversation or a pilot, not revenue. ("Open to being one of our first design partners?" / "Worth a 10-min call to see if it fits?") Never a hard sell.
@@ -60,7 +60,7 @@ Make sure `output/` has `icp.md`, `leads.csv`, `campaign.md`. Then ask the team:
 - **Personalize the first line** with the lead's trigger. It must be specific enough that it couldn't be sent to anyone else.
 
 ## Channel beats copy
-Remind the team: **where** you reach people dominates the words. In real campaigns, warm/partner channels outperformed pure cold by ~10x (47 vs ~4.6 opportunities per 1,000). Pick the sharpest channel before polishing copy.
+Remind the team: **where** you reach people dominates the words. Warm and partner channels often outperform pure cold outreach by an order of magnitude. Pick the sharpest channel before polishing copy.
 
 ## KPI hierarchy (measure what's tied to revenue)
 opportunities per 1,000 reaches > opportunities per reply > positive reply rate > raw reply rate. Don't optimize vanity metrics.
