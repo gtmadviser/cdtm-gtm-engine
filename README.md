@@ -56,6 +56,7 @@ See `examples/example_campaign.md` for the target shape.
 ```
 README.md             you are here — the task
 CLAUDE.md             the engine's brain: workflow + guardrails Claude follows
+RECOMMENDED-STACK.md  the tools to actually run this (ask Claude "what should I use for X?")
 prompts/icp.md        ICP definition framework
 prompts/sourcing.md   how to live-source leads (free, robust, polite)
 prompts/copy.md       email copy rules (learned from real campaigns)
@@ -64,3 +65,9 @@ scripts/scrape_example.py polite scraper skeleton Claude can adapt
 examples/             a worked example so you know what "done" looks like
 output/               your campaign lands here
 ```
+
+## Go deeper after class
+- **Which tools to use?** Ask Claude, or open `RECOMMENDED-STACK.md`.
+- Clay University — free GTM-engineering course
+- Instantly / lemlist / Smartlead academies — sending & deliverability
+- r/GTMEngineering — the community
