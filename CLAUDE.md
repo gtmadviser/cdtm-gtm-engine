@@ -42,6 +42,8 @@ If the team's buyer clearly lives in the inbox (classic local SMB), they can fli
 ### 0. Get product context (2 min)
 Ask, in one message: *what is the product, who's it for, what painful problem does it solve, and is it B2B or B2C?* Don't proceed without this.
 
+> **CDTM MPD team?** `examples/mpd-projects.md` has loose starter ICP ideas per project (BMW, Meta, Phoros, Poke), including how to turn a consumer/hardware product into a B2B cold-emailable segment. Use it as a jumping-off point, then sharpen with the team, don't just accept it.
+
 ### 1. Define the ICP (see `prompts/icp.md`) — write two files
 Push for **sharp**. Not "SMBs" — a specific who + a **trigger** that says they need this now (hiring, funding, a tech they use, a launch, a new role).
 - Write the human version to `output/icp.md` (one tight paragraph).
