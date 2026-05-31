@@ -1,0 +1,12 @@
+{
+  "label": "Example: small B2B software companies in Germany",
+  "country_code": "DE",
+  "industries": ["Software Development"],
+  "keywords": [],
+  "employee_range": ["1-10", "11-50"],
+  "exclude_type": ["Nonprofit"],
+  "job_title_include": ["CEO", "Founder", "Co-Founder", "Managing Director", "Geschäftsführer", "Inhaber"],
+  "job_title_exclude": ["Assistant", "Intern", "Working Student"],
+  "job_level": ["C-Team", "Director"],
+  "max_results": 25
+}

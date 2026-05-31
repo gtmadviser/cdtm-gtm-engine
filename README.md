@@ -1,38 +1,42 @@
-# gtm-engine-starter
+# cdtm-gtm-engine
 
-Build the first version of your product's **outbound GTM engine** — in 30 minutes, with Claude Code doing the heavy lifting.
+Build the first version of your product's **outbound GTM engine** in ~35 minutes, with Claude Code doing the heavy lifting.
 
-By the end you'll have a **ready-to-send cold email campaign** for *your* MPD product: a real list of target leads, sharp ICP, and personalized copy.
+By the end you'll have a **ready-to-send LinkedIn + email campaign** for *your* product: a sharp ICP, a real list of target leads (with LinkedIn URLs), and personalized copy, set up in lemlist.
 
-> You will **not** send anything in this session. You'll produce a campaign you *could* load into Instantly/Lemlist and send later.
+> You don't have to launch anything in class. You'll walk out with a real campaign you *could* send.
 
 ---
 
 ## Before you start (do this BEFORE class)
 
 See the setup guide your instructor sent. You need:
-1. **Claude Code** installed and authenticated (API key or Claude Pro/Max)
-2. This repo cloned
+1. **Claude Code** installed and authenticated (Claude Pro/Max or an Anthropic API key)
+2. This repo **forked** and your fork cloned
 3. One successful `claude` run to confirm it works
 
 In class we spend ~5 min on setup, not 25. Arrive ready.
 
+### Keys (takes 1 minute, in class)
+```bash
+cp .env.example .env     # then paste the BLITZAPI_API_KEY your instructor reads out
+```
+The only tool you sign up for is **lemlist** (free trial): https://get.lemlist.com/xq34wgkvqchh
+
 ---
 
-## The task (30 min, with your team)
+## The task (~35 min, with your team)
 
 Open this folder and run:
-
 ```bash
 claude
 ```
+Tell Claude what your product is and work through 4 steps. Claude knows the workflow (see `CLAUDE.md`), let it drive, you make the calls.
 
-Then tell Claude what your product is, and work through these 4 steps. Claude knows the workflow (see `CLAUDE.md`) — let it drive, you make the calls.
-
-1. **Define your ICP** — who exactly, and what *trigger* says they need you *now*. (ICP = ideal customer profile. Claude will explain anything unfamiliar — beginners welcome.)
-2. **Pick your channel + source 25–50 real leads** — cold email or LinkedIn (B2C: community / creator / partner). Claude finds real leads live for your actual market.
-3. **Write the copy** — personalized step-1 + step-2 messages with a **pilot / design-partner CTA** (not a hard sell), following the rules in `CLAUDE.md`.
-4. **Assemble the campaign** — output a leads CSV + the sequence to `output/`.
+1. **Define your ICP** — who exactly, and the *trigger* that says they need you *now*. Claude writes it to `output/icp.md` and `output/icp.json`.
+2. **Source a real list** — Claude runs `scripts/source_leads.py` to pull 25–50 real decision-makers (with LinkedIn URLs) for your market via the Blitz API → `output/leads.csv`.
+3. **Write the copy** — a LinkedIn connection note + DMs, plus a 2-step email backup, with a soft pilot / design-partner CTA. → `output/campaign.md`.
+4. **Set it up in lemlist** — import the leads, paste the sequence. Ready to send.
 
 Just say to Claude:
 > "Read CLAUDE.md, then walk me through building a first campaign. Our product is ___ and it helps ___."
@@ -42,10 +46,11 @@ Just say to Claude:
 ## Definition of done
 
 In `output/` you have:
-- [ ] `icp.md` — your ICP + trigger, in one tight paragraph
-- [ ] `leads.csv` — 25–50 real leads with the columns in `data/leads_template.csv`
-- [ ] `campaign.md` — step-1 + step-2 copy, ready to paste into a sending tool
-- [ ] You can name your **one north-star metric** (e.g., meetings / 100 sends)
+- [ ] `icp.md` + `icp.json` — your ICP + trigger (human + machine-readable)
+- [ ] `leads.csv` — 25–50 real leads with LinkedIn URLs (columns in `data/leads_template.csv`)
+- [ ] `campaign.md` — connection note + DMs + a 2-step email, ready to paste
+- [ ] a campaign set up in **lemlist**
+- [ ] you can name your **one north-star metric** (e.g. pilot calls / 100 reaches)
 
 See `examples/example_campaign.md` for the target shape.
 
@@ -54,20 +59,22 @@ See `examples/example_campaign.md` for the target shape.
 ## Repo map
 
 ```
-README.md             you are here — the task
-CLAUDE.md             the engine's brain: workflow + guardrails Claude follows
-RECOMMENDED-STACK.md  the tools to actually run this (ask Claude "what should I use for X?")
-prompts/icp.md        ICP definition framework
-prompts/sourcing.md   how to live-source leads (free, robust, polite)
-prompts/copy.md       email copy rules (learned from real campaigns)
+README.md                 you are here, the task
+CLAUDE.md                 the engine's brain: workflow + guardrails Claude follows
+RECOMMENDED-STACK.md      the tools to actually run this (ask Claude "what should I use for X?")
+.env.example              copy to .env, paste the Blitz API key from your instructor
+prompts/icp.md            ICP definition framework
+prompts/sourcing.md       how to build a real list (Blitz API first, free fallback)
+prompts/copy.md           copy rules (learned from real campaigns)
+scripts/source_leads.py   pulls a real TAM list via the Blitz API (no pip installs)
+scripts/scrape_example.py polite scraper skeleton, the free fallback
+data/icp.example.json     shape for output/icp.json (the sourcing config)
 data/leads_template.csv   the lead schema
-scripts/scrape_example.py polite scraper skeleton Claude can adapt
-examples/             a worked example so you know what "done" looks like
-output/               your campaign lands here
+examples/                 a worked example so you know what "done" looks like
+output/                   your campaign lands here
 ```
 
 ## Go deeper after class
 - **Which tools to use?** Ask Claude, or open `RECOMMENDED-STACK.md`.
-- Clay University — free GTM-engineering course
-- Instantly / lemlist / Smartlead academies — sending & deliverability
-- r/GTMEngineering — the community
+- Everything from the session lives at **cdtm.gtmadviser.com**.
+- Clay University — free GTM-engineering course · Eric Nowoslawski (Growth Engine X) — free cold-email course · r/GTMEngineering — the community.
