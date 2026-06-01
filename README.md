@@ -17,11 +17,11 @@ See the setup guide your instructor sent. You need:
 
 In class we spend ~5 min on setup, not 25. Arrive ready.
 
-### Keys (takes 1 minute, in class)
+### Keys (a few minutes, free)
 ```bash
-cp .env.example .env     # then paste the BLITZAPI_API_KEY your instructor reads out
+cp .env.example .env
 ```
-The only tool you sign up for is **lemlist** (free trial): https://get.lemlist.com/xq34wgkvqchh
+Paste your own **BLITZAPI_API_KEY** (https://app.blitz-api.ai) and **LEMLIST_API_KEY** (lemlist -> Settings -> Integrations -> API). Both are free to start; `.env` is gitignored.
 
 ---
 
@@ -65,8 +65,11 @@ RECOMMENDED-STACK.md      the tools to actually run this (ask Claude "what shoul
 .env.example              copy to .env, paste the Blitz API key from your instructor
 prompts/icp.md            ICP definition framework
 prompts/sourcing.md       how to build a real list (Blitz API first, free fallback)
+prompts/blitzapi.md       Blitz API contract — "find my TAM"
+prompts/lemlist.md        lemlist API contract — "set up my multichannel campaign"
 prompts/copy.md           copy rules (learned from real campaigns)
 scripts/source_leads.py   pulls a real TAM list via the Blitz API (no pip installs)
+scripts/push_to_lemlist.py adds your leads (+ optional steps) into a lemlist campaign
 scripts/scrape_example.py polite scraper skeleton, the free fallback
 data/icp.example.json     shape for output/icp.json (the sourcing config)
 data/leads_template.csv   the lead schema

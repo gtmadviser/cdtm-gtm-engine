@@ -11,12 +11,17 @@ Be a driver, not a lecturer. Move fast, make concrete artifacts, ask only the qu
 
 ---
 
-## Tools pre-wired for this workshop
-- **Blitz API** for sourcing real leads. The key is in `.env` (`BLITZAPI_API_KEY`); the instructor shares it in class. `scripts/source_leads.py` uses it. No pip installs (standard library only).
-- **lemlist** for sending across LinkedIn + email. Students sign up for a free trial via the instructor's link: https://get.lemlist.com/xq34wgkvqchh
-- For any other tool (enrichment, scraping, validation, building their product), use the tool-recommendation directive below + `RECOMMENDED-STACK.md`.
+## Tools you'll use (bring your own keys)
+Copy `.env.example` to `.env` and paste YOUR OWN keys (both free to start, never commit them):
+- **Blitz API** (`BLITZAPI_API_KEY`) sources your list. Create one at https://app.blitz-api.ai
+- **lemlist** (`LEMLIST_API_KEY`) sends across LinkedIn + email. Create one at lemlist -> Settings -> Integrations -> API (free trial: https://get.lemlist.com/xq34wgkvqchh)
 
-> First time you touch the key: tell the student to copy `.env.example` to `.env` and paste the key the instructor shared. Never print the key.
+No pip installs (standard library only). Never print or commit a key.
+
+## Two skills you know how to run
+- **"Find my TAM / source leads"** -> Blitz API. Run `scripts/source_leads.py` (reads `output/icp.json`, writes `output/leads.csv`). Full contract + gotchas: `prompts/blitzapi.md`.
+- **"Set up a multichannel campaign"** -> lemlist API. The reproducible flow (add leads, LinkedIn + email sequence steps, auth + gotchas) is in `prompts/lemlist.md`. `scripts/push_to_lemlist.py --campaign <id>` imports `output/leads.csv` into a campaign and can push the steps.
+- For any other tool, use the tool-recommendation directive below + `RECOMMENDED-STACK.md`.
 
 ## What we're building
 
@@ -60,8 +65,8 @@ This writes `output/leads.csv`. **Show the team the first few on screen, that's 
 ### 3. Write the copy (see `prompts/copy.md`) — LinkedIn-first + email
 Write a **connection note** (≤300 chars, no pitch) + **DM1/DM2** (after they accept), plus a **2-step email** backup. Personalize the first line from each lead's trigger. Follow the copy rules below strictly. Write everything to `output/campaign.md`.
 
-### 4. Set it up in lemlist
-Walk them through: sign up (free-trial link above), connect their channels, import `output/leads.csv`, create a multichannel campaign, and paste the connection note + DMs + the 2 emails with sensible delays. They do **not** have to launch it today, the ready-to-go artifact is the win. Note their one **north-star metric** at the top of `campaign.md` (e.g. pilot calls / 100 reaches).
+### 4. Set it up in lemlist (see `prompts/lemlist.md`)
+With their `LEMLIST_API_KEY` in `.env`: create a campaign in lemlist, connect their LinkedIn + a mailbox, then either paste the sequence from `output/campaign.md` in the UI, or run `scripts/push_to_lemlist.py --campaign <id>` to import `output/leads.csv` (and optionally push the steps from an `output/sequence.json`). Leave it **paused**, they don't have to launch today. Note their one **north-star metric** at the top of `campaign.md` (e.g. pilot calls / 100 reaches).
 
 ---
 

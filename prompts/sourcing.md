@@ -4,7 +4,7 @@ We source **live**, real people for *this* team's market. Small and real (25–5
 
 ## Primary path: the Blitz API (pre-wired)
 
-`scripts/source_leads.py` pulls real decision-makers (with LinkedIn URLs) that match the ICP, using the Blitz API. The key is already in `.env` (`BLITZAPI_API_KEY`, shared by the instructor). No pip installs.
+`scripts/source_leads.py` pulls real decision-makers (with LinkedIn URLs) that match the ICP, using the Blitz API (your own `BLITZAPI_API_KEY` in `.env`, free at https://app.blitz-api.ai). Full API contract + gotchas: `prompts/blitzapi.md`. No pip installs.
 
 **Step 1 — write the machine-readable ICP.** From the team's ICP, write `output/icp.json` (shape in `data/icp.example.json`):
 ```json
